@@ -1,4 +1,4 @@
-# UI-only extension, loaded by Gunicorn from the repository root.
+# UI extension, loaded by Gunicorn from the repository root.
 def post_worker_init(worker):
     import app as dashboard
     html = dashboard.HTML
@@ -60,3 +60,5 @@ function dateSummary(s){
     replace('Fecha de cierre junto al ticker y sobre cada celda.', 'Fecha de cierre y hora de actualizacion en el resumen superior; los tickers se muestran sin fechas.')
     replace('<script>', '<script>' + js)
     dashboard.HTML = html
+    from technical import install
+    install(dashboard)
