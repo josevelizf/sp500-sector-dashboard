@@ -60,5 +60,5 @@ function dateSummary(s){
     replace('Fecha de cierre junto al ticker y sobre cada celda.', 'Fecha de cierre y hora de actualizacion en el resumen superior; los tickers se muestran sin fechas.')
     replace('<script>', '<script>' + js)
     dashboard.HTML = html
-    from technical import install
+    from averages import install
     install(dashboard)
